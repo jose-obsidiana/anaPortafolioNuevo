@@ -1543,3 +1543,90 @@ section,
   margin-bottom: 1rem;
 }
 
+
+
+/* PROYECTOS */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.slide {
+  position: relative;
+  display: none;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+}
+
+.caption {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  padding: 15px 20px;
+  backdrop-filter: blur(4px);
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.prev { left: 30px; }
+.next { right: 30px; }
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+
+/*lupa img */
+.portfolio-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.zoom-trigger {
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.zoom-trigger:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+  color: var(--accent-color);
+}
